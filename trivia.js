@@ -1,0 +1,1 @@
+document.write("<p>There's even a javascript file!</p>");
