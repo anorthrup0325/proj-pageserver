@@ -84,6 +84,8 @@ def respond(sock):
         transmit("HTTP/1.0 200 OK\n\n", sock)
         
         url = parts[1]
+        if len(url) <= 1:
+            url = "/index.html"
         # None of those "undesirables"
         if ("~" not in url) and (".." not in url) and ("//" not in url):
         	# Only html and css requests (I also allow js)
